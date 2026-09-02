@@ -1,0 +1,3 @@
+import { HeartHandshake, ShieldCheck, Stethoscope, UsersRound } from 'lucide-react';
+const icons={HeartHandshake,ShieldCheck,Stethoscope,UsersRound};
+export default function FeatureCard({icon,title,body,color}:{icon:keyof typeof icons;title:string;body:string;color:string}){const Icon=icons[icon];return <div className="group rounded-[22px] border border-[#e3eee8] bg-white p-7 shadow-soft transition hover:-translate-y-1"><div className={`mb-7 flex h-14 w-14 items-center justify-center rounded-2xl ${color}`}><Icon size={27}/></div><h3 className="text-xl font-extrabold text-navy">{title}</h3><p className="mt-3 text-[#647789]">{body}</p><div className="mt-7 h-1 w-10 rounded-full bg-gold transition-all group-hover:w-16"/></div>}
