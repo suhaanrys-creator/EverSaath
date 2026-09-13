@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 import FeatureCard from './FeatureCard';
 
+const logoSrc = `${process.env.NODE_ENV === 'production' ? '/EverSaath' : ''}/eversaath-logo.png`;
+
 const features = [
   { icon: 'HeartHandshake' as const, title: 'Trusted Companions', body: 'Find someone for conversations, walks, shopping, technology help or hospital visits.', color: 'bg-[#fff2ce] text-[#b87900]' },
   { icon: 'ShieldCheck' as const, title: 'Verified Caregivers', body: 'Book trained and verified caregivers for everyday support and wellbeing.', color: 'bg-[#dff4e8] text-emerald' },
@@ -25,7 +27,7 @@ export default function HomePage() {
       <div className="pointer-events-none absolute -bottom-48 left-1/3 h-[430px] w-[430px] rounded-full border-[70px] border-white/60" />
       <div className="container relative grid items-center gap-12 lg:grid-cols-[1.02fr_.98fr]">
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
-          <Image src="/eversaath-logo.png" width={92} height={92} alt="EverSaath logo" className="mb-4 h-[92px] w-[92px] object-contain object-left" />
+          <Image src={logoSrc} width={92} height={92} alt="EverSaath logo" className="mb-4 h-[92px] w-[92px] object-contain object-left" />
           <p className="eyebrow flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-gold" /> Always there, always caring.</p>
           <h1 className="mt-5 max-w-xl text-5xl font-extrabold leading-[1.07] tracking-tight text-navy md:text-7xl">More life.<br /><span className="text-teal">More friends.</span><br />More care.</h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-[#536b7b]">EverSaath connects seniors with trusted companions, verified caregivers, healthcare support and community activities, while keeping families connected.</p>
