@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
-const logoSrc = `${process.env.NODE_ENV === 'production' ? '/EverSaath' : ''}/eversaath-logo.png`;
+const logoSrc = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/eversaath-logo.png`;
 
 const links = [['Services','/services'],['Find a Companion','/companions'],['Community','/community'],['Family','/family'],['Safety','/safety'],['About','/about'],['Contact','/contact']];
 

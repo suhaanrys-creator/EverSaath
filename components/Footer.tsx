@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Facebook, Linkedin, Mail, Phone } from 'lucide-react';
 
-const logoSrc = `${process.env.NODE_ENV === 'production' ? '/EverSaath' : ''}/eversaath-logo.png`;
+const logoSrc = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/eversaath-logo.png`;
 
 export default function Footer() {
   return <footer className="bg-navy pb-8 pt-16 text-white"><div className="container grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]">

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 import FeatureCard from './FeatureCard';
 
-const logoSrc = `${process.env.NODE_ENV === 'production' ? '/EverSaath' : ''}/eversaath-logo.png`;
+const logoSrc = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/eversaath-logo.png`;
 
 const features = [
   { icon: 'HeartHandshake' as const, title: 'Trusted Companions', body: 'Find someone for conversations, walks, shopping, technology help or hospital visits.', color: 'bg-[#fff2ce] text-[#b87900]' },

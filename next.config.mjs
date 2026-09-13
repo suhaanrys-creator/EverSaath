@@ -2,7 +2,7 @@
 const nextConfig = {
 	output: 'export',
 	trailingSlash: true,
-	basePath: process.env.NODE_ENV === 'production' ? '/EverSaath' : '',
+	basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
 	images: {
 		unoptimized: true,
 		remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
